@@ -4,7 +4,9 @@
   "description": "backend for iiitn website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npde dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\"  \"nodemon -q dist/index.js\""
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,12 @@
   "dependencies": {
     "express": "^4.18.1",
     "typeorm": "^0.3.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.0",
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.16",
+    "typescript": "^4.7.3"
   }
 }
